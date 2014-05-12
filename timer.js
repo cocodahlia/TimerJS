@@ -53,13 +53,13 @@ function getRestTimeText() {
 function soundOff(){
 	if (counter % 2 == 0){
 		sound = false;
-		sound_off.value="ONにする";
-		document.getElementById( "sound" ).innerHTML = "ボタンをおすと音声を再生するか選べます（現在：OFF）";
+		sound_off.value="音を鳴らす";
+		document.getElementById( "sound" ).innerHTML = "ボタンをおすと音声を再生するか選べます（現在：音声再生OFF）";
 		counter++;
 	}else{
 		sound = true;
-		sound_off.value="OFFにする"
-		document.getElementById( "sound" ).innerHTML = "ボタンをおすと音声を再生するか選べます（現在：ON）";
+		sound_off.value="音を鳴らさない"
+		document.getElementById( "sound" ).innerHTML = "ボタンをおすと音声を再生するか選べます（現在：音声再生ON）";
 		counter++;
 	}
 
