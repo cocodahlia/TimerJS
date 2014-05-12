@@ -28,6 +28,7 @@ function stopTimer(){
 		countTime = null;
 		document.getElementById( "countdown" ).innerHTML = getRestTimeText() + "<br>Goをおすとはじめからカウントダウンしなおします";
 		selectTime = 0;
+
 	}
 }
 
