@@ -5,6 +5,7 @@ function startTimer(){
 	if(countTime != null){
 		alert( "うごいてるー" );
 	}else{
+		document.getElementById("start").disabled = "disabled";
 		var mySelect = document.Form.selector.selectedIndex;
 		selectTime = document.Form.selector.options[mySelect].value - 0;
 		countTime = setInterval ( setTimer, 1000 );
@@ -18,6 +19,7 @@ function setTimer(){
 		clearInterval( countTime );
 		alert( "終了ー" );
 		countTime = null;
+		document.getElementById("start").disabled = "";
 		document.getElementById( "countdown" ).innerHTML = getRestTimeText() + "<br>Goをおすとカウントダウンがはじまります";
 	}
 }
@@ -25,6 +27,7 @@ function setTimer(){
 function stopTimer(){
 	if(countTime != null){
 		clearInterval(countTime);
+		document.getElementById("start").disabled = "";
 		countTime = null;
 		document.getElementById( "countdown" ).innerHTML = getRestTimeText() + "<br>Goをおすとはじめからカウントダウンしなおします";
 		selectTime = 0;
