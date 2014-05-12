@@ -8,7 +8,6 @@ function startTimer() {
 	var mySelect = document.Form.selector.selectedIndex;
 	selectTime = document.Form.selector.options[mySelect].value - 0;
 	countTime = setInterval(setTimer, 1000);
-
 }
 
 function setTimer() {
@@ -18,17 +17,15 @@ function setTimer() {
 		if (sound) {
 			clearInterval(countTime);
 			countTime = null;
-			document.getElementById("start").disabled = "";
 			audio = new Audio();
 			audio.src = "ata_a19.wav";
 			audio.play();
-			document.getElementById("countdown").innerHTML = getRestTimeText() + "<br>Goをおすとカウントダウンがはじまります";
+			finishTimer();
 		} else {
 			clearInterval(countTime);
 			alert("終了ー");
 			countTime = null;
-			document.getElementById("start").disabled = "";
-			document.getElementById("countdown").innerHTML = getRestTimeText() + "<br>Goをおすとカウントダウンがはじまります";
+			finishTimer()
 		}
 	}
 }
@@ -62,5 +59,9 @@ function soundOff() {
 		document.getElementById("sound").innerHTML = "ボタンをおすと音声を再生するか選べます（現在：音声再生ON）";
 		counter++;
 	}
+}
 
+function finishTimer() {
+	document.getElementById("start").disabled = "";
+	document.getElementById("countdown").innerHTML = getRestTimeText() + "<br>Goをおすとカウントダウンがはじまります";
 }
