@@ -3,42 +3,42 @@ var countTime = null;
 var sound = true;
 var counter = 0;
 
-function startTimer(){
+function startTimer() {
 	document.getElementById("start").disabled = "disabled";
 	var mySelect = document.Form.selector.selectedIndex;
 	selectTime = document.Form.selector.options[mySelect].value - 0;
-	countTime = setInterval ( setTimer, 1000 );
+	countTime = setInterval(setTimer, 1000);
 
 }
 
-function setTimer(){
+function setTimer() {
 	selectTime = selectTime - 1;
-	document.getElementById( "countdown" ).innerHTML = getRestTimeText() + "<br>Stopをおすととまります";
-	if ( selectTime == 0 ){
-		if( sound ){
-			clearInterval( countTime );
+	document.getElementById("countdown").innerHTML = getRestTimeText() + "<br>Stopをおすととまります";
+	if (selectTime == 0) {
+		if (sound) {
+			clearInterval(countTime);
 			countTime = null;
 			document.getElementById("start").disabled = "";
 			audio = new Audio();
 			audio.src = "ata_a19.wav";
 			audio.play();
-			document.getElementById( "countdown" ).innerHTML = getRestTimeText() + "<br>Goをおすとカウントダウンがはじまります";
-		}else{
-			clearInterval( countTime );
-			alert( "終了ー" );
+			document.getElementById("countdown").innerHTML = getRestTimeText() + "<br>Goをおすとカウントダウンがはじまります";
+		} else {
+			clearInterval(countTime);
+			alert("終了ー");
 			countTime = null;
 			document.getElementById("start").disabled = "";
-			document.getElementById( "countdown" ).innerHTML = getRestTimeText() + "<br>Goをおすとカウントダウンがはじまります";
+			document.getElementById("countdown").innerHTML = getRestTimeText() + "<br>Goをおすとカウントダウンがはじまります";
 		}
 	}
 }
 
-function stopTimer(){
-	if(countTime != null){
+function stopTimer() {
+	if (countTime != null) {
 		clearInterval(countTime);
 		document.getElementById("start").disabled = "";
 		countTime = null;
-		document.getElementById( "countdown" ).innerHTML = getRestTimeText() + "<br>Goをおすとはじめからカウントダウンしなおします";
+		document.getElementById("countdown").innerHTML = getRestTimeText() + "<br>Goをおすとはじめからカウントダウンしなおします";
 		selectTime = 0;
 
 	}
@@ -47,19 +47,19 @@ function stopTimer(){
 function getRestTimeText() {
 	var minutes = Math.floor(selectTime / 60);
 	var seconds = selectTime % 60;
-	return "残り時間：" + minutes + "分"+ seconds + "秒";
+	return "残り時間：" + minutes + "分" + seconds + "秒";
 }
 
-function soundOff(){
-	if (counter % 2 == 0){
+function soundOff() {
+	if (counter % 2 == 0) {
 		sound = false;
-		sound_off.value="音を鳴らす";
-		document.getElementById( "sound" ).innerHTML = "ボタンをおすと音声を再生するか選べます（現在：音声再生OFF）";
+		sound_off.value = "音を鳴らす";
+		document.getElementById("sound").innerHTML = "ボタンをおすと音声を再生するか選べます（現在：音声再生OFF）";
 		counter++;
-	}else{
+	} else {
 		sound = true;
-		sound_off.value="音を鳴らさない"
-		document.getElementById( "sound" ).innerHTML = "ボタンをおすと音声を再生するか選べます（現在：音声再生ON）";
+		sound_off.value = "音を鳴らさない"
+		document.getElementById("sound").innerHTML = "ボタンをおすと音声を再生するか選べます（現在：音声再生ON）";
 		counter++;
 	}
 
