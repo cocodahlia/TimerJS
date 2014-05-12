@@ -17,7 +17,6 @@ function setTimer(){
 	if ( selectTime == 0 ){
 		if( sound ){
 			clearInterval( countTime );
-			//alert( "終了ー" );
 			countTime = null;
 			document.getElementById("start").disabled = "";
 			audio = new Audio();
@@ -54,12 +53,12 @@ function getRestTimeText() {
 function soundOff(){
 	if (counter % 2 == 0){
 		sound = false;
-		sound_off.value="ON";
+		sound_off.value="ONにする";
 		document.getElementById( "sound" ).innerHTML = "ボタンをおすと音声を再生するか選べます（現在：OFF）";
 		counter++;
 	}else{
 		sound = true;
-		sound_off.value="OFF"
+		sound_off.value="OFFにする"
 		document.getElementById( "sound" ).innerHTML = "ボタンをおすと音声を再生するか選べます（現在：ON）";
 		counter++;
 	}
