@@ -14,9 +14,12 @@ function setTimer(){
 	document.getElementById( "countdown" ).innerHTML = getRestTimeText() + "<br>Stopをおすととまります";
 	if ( selectTime == 0 ){
 		clearInterval( countTime );
-		alert( "終了ー" );
+		//alert( "終了ー" );
 		countTime = null;
 		document.getElementById("start").disabled = "";
+		audio = new Audio();
+		audio.src = "ata_a19.wav";
+		audio.play();
 		document.getElementById( "countdown" ).innerHTML = getRestTimeText() + "<br>Goをおすとカウントダウンがはじまります";
 	}
 }
