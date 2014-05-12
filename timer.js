@@ -2,14 +2,11 @@ var selectTime = 0;
 var countTime = null;
 
 function startTimer(){
-	if(countTime != null){
-		alert( "うごいてるー" );
-	}else{
-		document.getElementById("start").disabled = "disabled";
-		var mySelect = document.Form.selector.selectedIndex;
-		selectTime = document.Form.selector.options[mySelect].value - 0;
-		countTime = setInterval ( setTimer, 1000 );
-	}
+	document.getElementById("start").disabled = "disabled";
+	var mySelect = document.Form.selector.selectedIndex;
+	selectTime = document.Form.selector.options[mySelect].value - 0;
+	countTime = setInterval ( setTimer, 1000 );
+
 }
 
 function setTimer(){
