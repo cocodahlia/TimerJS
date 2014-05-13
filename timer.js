@@ -18,6 +18,7 @@ function setTimer() {
 			clearInterval(countTime);
 			countTime = null;
 			playSound();
+				finishTimer();
 		} else {
 			clearInterval(countTime);
 			alert("終了ー");
@@ -67,5 +68,4 @@ function playSound() {
 	audio = new Audio();
 	audio.src = "ata_a19.wav";
 	audio.play();
-	finishTimer();
 }
