@@ -17,10 +17,7 @@ function setTimer() {
 		if (sound) {
 			clearInterval(countTime);
 			countTime = null;
-			audio = new Audio();
-			audio.src = "ata_a19.wav";
-			audio.play();
-			finishTimer();
+			playSound();
 		} else {
 			clearInterval(countTime);
 			alert("終了ー");
@@ -64,4 +61,11 @@ function soundOff() {
 function finishTimer() {
 	document.getElementById("start").disabled = "";
 	document.getElementById("countdown").innerHTML = getRestTimeText() + "<br>Goをおすとカウントダウンがはじまります";
+}
+
+function playSound() {
+	audio = new Audio();
+	audio.src = "ata_a19.wav";
+	audio.play();
+	finishTimer();
 }
