@@ -6,6 +6,7 @@
 	<meta http-equiv="content-style-type" content="text/css">
 	<meta http-equiv="content-script-type" content="text/javascript">
 	<title>たいまー</title>
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen">
 	<script src="timer.js"></script>
 </head>
 <body>
@@ -29,7 +30,7 @@
 				<span id="countdown">Goをおすとカウントダウンがはじまります</span>
 			</p>
 			<p>
-				<input type="button" value="音を鳴らさない" id="sound_off" onclick="soundOff()">
+				<input type="button" value="音を鳴らさない" id="sound_off" onclick="toggleSound()">
 				<br>
 				<span id="sound">ボタンをおすと音声を再生するか選べます（現在：音声再生ON）</span>
 			</p>

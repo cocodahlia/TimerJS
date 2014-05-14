@@ -1,7 +1,7 @@
 var selectTime = 0;
 var countTime = null;
 var sound = true;
-var counter = 0;
+var counter = true;
 
 function startTimer() {
 	document.getElementById("start").disabled = "disabled";
@@ -16,9 +16,9 @@ function setTimer() {
 	if (selectTime == 0) {
 		if (sound) {
 			clearInterval(countTime);
-			countTime = null;
 			playSound();
-				finishTimer();
+			countTime = null;
+			finishTimer();
 		} else {
 			clearInterval(countTime);
 			alert("終了ー");
@@ -35,7 +35,6 @@ function stopTimer() {
 		countTime = null;
 		document.getElementById("countdown").innerHTML = getRestTimeText() + "<br>Goをおすとはじめからカウントダウンしなおします";
 		selectTime = 0;
-
 	}
 }
 
@@ -45,17 +44,17 @@ function getRestTimeText() {
 	return "残り時間：" + minutes + "分" + seconds + "秒";
 }
 
-function soundOff() {
-	if (counter % 2 == 0) {
+function toggleSound() {
+	if (counter) {
 		sound = false;
 		sound_off.value = "音を鳴らす";
 		document.getElementById("sound").innerHTML = "ボタンをおすと音声を再生するか選べます（現在：音声再生OFF）";
-		counter++;
+		counter = false;
 	} else {
 		sound = true;
 		sound_off.value = "音を鳴らさない"
 		document.getElementById("sound").innerHTML = "ボタンをおすと音声を再生するか選べます（現在：音声再生ON）";
-		counter++;
+		counter = true;
 	}
 }
 

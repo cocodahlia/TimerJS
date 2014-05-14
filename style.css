@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'M+ 1c regular';
+	src: url('http://moonfire.info/fonts/mplus-1c-regular/mplus-1c-regular-sub.eot');
+	src: url('http://moonfire.info/fonts/mplus-1c-regular/mplus-1c-regular-sub.eot?#iefix') format('embedded-opentype'),
+	url('http://moonfire.info/fonts/mplus-1c-regular/mplus-1c-regular-sub.woff') format('woff'),
+	url('http://moonfire.info/fonts/mplus-1c-regular/mplus-1c-regular-sub.ttf') format('truetype');
+}
+
+body{
+	background:#f0f0f0; /* 背景 */
+	color:#504946; /* 文字色 */
+	font-size:12px; /* 文字サイズ */
+	font-family: 'M+ 1c regular';
+}
+
+textarea,input{
+	margin:5px 0;
+	padding:2px;
+	border:1px solid #f0f0f0;
+	background-color:#ffffff;
+	color:#504946;
+	font-size:12px;
+	font-family: 'M+ 1c regular';
+}
