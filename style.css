@@ -1,9 +1,9 @@
 @font-face {
 	font-family: 'M+ 1c regular';
-	src: url('http://moonfire.info/fonts/mplus-1c-regular/mplus-1c-regular-sub.eot');
-	src: url('http://moonfire.info/fonts/mplus-1c-regular/mplus-1c-regular-sub.eot?#iefix') format('embedded-opentype'),
-	url('http://moonfire.info/fonts/mplus-1c-regular/mplus-1c-regular-sub.woff') format('woff'),
-	url('http://moonfire.info/fonts/mplus-1c-regular/mplus-1c-regular-sub.ttf') format('truetype');
+	src: url('../../fonts/mplus-1c-regular/mplus-1c-regular-sub.eot');
+	src: url('../../fonts/mplus-1c-regular/mplus-1c-regular-sub.eot?#iefix') format('embedded-opentype'),
+	url('../../fonts/mplus-1c-regular/mplus-1c-regular-sub.woff') format('woff'),
+	url('../../fonts/mplus-1c-regular/mplus-1c-regular-sub.ttf') format('truetype');
 }
 
 body{
